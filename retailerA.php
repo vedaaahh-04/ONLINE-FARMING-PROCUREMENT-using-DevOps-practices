@@ -4,7 +4,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="acc.css">
+	<link rel="stylesheet" href="acc1.css">
 </head>
 <body>
 	<div class="banner">	
@@ -24,6 +24,7 @@
 			</h6>
 			<p>Buy your required product here for a reasonable price !!!</p>
 		</div><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br>
 		<div class="main">
 			<form name="fa" action="retailerdata.php" method="post">
 				<h2 class="name">Select the product : </h2>

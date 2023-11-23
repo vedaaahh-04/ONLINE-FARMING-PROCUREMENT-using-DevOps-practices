@@ -22,6 +22,7 @@
 			</h6>
 			<p>Sell your product here for the maximum profit !!!</p>
 		</div><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br>
 		<div class="main">
 			<form name="fa" action="finalfarmer.php" method="post">
 				<h2 class="name">Select the product : </h2>

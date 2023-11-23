@@ -15,7 +15,7 @@
 		</div>
 		<div class="content">
 			<?php
-				$con = mysqli_connect("localhost","root","","mpofp");
+				$con = mysqli_connect("localhost","root","","veda");
 				if($con===false)
 					die("CONNECTION FAILED".mysqli_connect_error());
 				$a=$_POST['ffname'];
@@ -25,7 +25,7 @@
 				$e=$_POST['fpwd'];
 				$g=$_POST['cfpwd'];
 				$f=$_POST['faddr'];
-				$q="INSERT INTO farmer(fname,lname,pno,uname,password,address) VALUES ('$a','$b','$c','$d','$e','$f')";
+				$q="INSERT INTO farmers(fname,lname,pno,uname,password,address) VALUES ('$a','$b','$c','$d','$e','$f')";
 				if($e != $g){
 					echo "<script type=\"text/javascript\">
 						alert(\"Password does not match !!!\");

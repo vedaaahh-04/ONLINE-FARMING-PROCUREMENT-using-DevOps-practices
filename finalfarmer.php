@@ -18,7 +18,7 @@
 		<div align="center">
 			<h6>Retailers list : </h6>
 			<?php
-				$con = mysqli_connect("localhost","root","","mpofp");
+				$con = mysqli_connect("localhost","root","","veda");
 				if($con===false)
 					die("CONNECTION FAILED".mysqli_connect_error());
 				$item = $_POST['course'];

@@ -1,10 +1,10 @@
 <?php
 	session_start();
-	$con = mysqli_connect("localhost","root","","mpofp");
+	$con = mysqli_connect("localhost","root","","veda");
 	if($con===false)
 		die("CONNECTION FAILED".mysqli_connect_error());
 	$uname = $_SESSION['uname'];
-	$a = "select `rfname` from `retailer` where `runame`='$uname'";
+	$a = "select `rfname` from `retailers` where `runame`='$uname'";
 	$result = mysqli_query($con,$a);
 	if ($result->num_rows > 0) {
 		// output data of each row
@@ -12,7 +12,7 @@
 			$fname = $row['rfname'];
 		}
 	}
-	$b = "select `rlname` from `retailer` where `runame`='$uname'";
+	$b = "select `rlname` from `retailers` where `runame`='$uname'";
 	$result1 = mysqli_query($con,$b);
 	if ($result1->num_rows > 0) {
 		// output data of each row
@@ -20,7 +20,7 @@
 			$lname = $row['rlname'];
 		}
 	}
-	$c = "select `rpno` from `retailer` where `runame`='$uname'";
+	$c = "select `rpno` from `retailers` where `runame`='$uname'";
 	$result2 = mysqli_query($con,$c);
 	if ($result2->num_rows > 0) {
 		// output data of each row
@@ -28,7 +28,7 @@
 			$pno = $row['rpno'];
 		}
 	}
-	$d = "select `raddress` from `retailer` where `runame`='$uname'";
+	$d = "select `raddress` from `retailers` where `runame`='$uname'";
 	$result3 = mysqli_query($con,$d);
 	if ($result3->num_rows > 0) {
 		// output data of each row

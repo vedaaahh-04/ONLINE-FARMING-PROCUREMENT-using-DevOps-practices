@@ -2,12 +2,12 @@
 	session_start();
 	$uname = $_POST['funame'];
 	$password = $_POST['fpwd'];
-	$con = mysqli_connect("localhost","root","","mpofp");
+	$con = mysqli_connect("localhost","root","","veda");
 	if($con==false){
 		die("connection failed".mysqli_connect_error());
 	}
 	else{
-		$stmt = $con->prepare("select * from farmer where uname = ?");
+		$stmt = $con->prepare("select * from farmers where uname = ?");
 		$stmt->bind_param("s",$uname);
 		$stmt->execute();
 		$stmt_result = $stmt->get_result();

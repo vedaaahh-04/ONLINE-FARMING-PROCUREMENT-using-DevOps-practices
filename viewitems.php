@@ -18,7 +18,7 @@
 		<div align="center">
 			<h6>Items requested by you : </h6>
 			<?php
-				$con = mysqli_connect("localhost","root","","mpofp");
+				$con = mysqli_connect("localhost","root","","veda");
 				if($con===false)
 					die("CONNECTION FAILED".mysqli_connect_error());
 				$uname = $_SESSION['uname'];

@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$con = mysqli_connect("localhost","root","","mpofp");
+	$con = mysqli_connect("localhost","root","","veda");
 	if($con===false)
 		die("CONNECTION FAILED".mysqli_connect_error());
 	$uname = $_SESSION['uname'];

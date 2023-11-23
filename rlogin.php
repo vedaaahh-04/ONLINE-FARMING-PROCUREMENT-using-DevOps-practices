@@ -2,12 +2,12 @@
 	session_start();
 	$uname = $_POST['runame'];
 	$password = $_POST['rpwd'];
-	$con = mysqli_connect("localhost","root","","mpofp");
+	$con = mysqli_connect("localhost","root","","veda");
 	if($con==false){
 		die("connection failed".mysqli_connect_error());
 	}
 	else{
-		$stmt = $con->prepare("select * from retailer where runame = ?");
+		$stmt = $con->prepare("select * from retailers where runame = ?");
 		$stmt->bind_param("s",$uname);
 		$stmt->execute();
 		$stmt_result = $stmt->get_result();

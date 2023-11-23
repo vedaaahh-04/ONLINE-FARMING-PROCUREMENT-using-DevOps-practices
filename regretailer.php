@@ -15,7 +15,7 @@
 		</div>
 		<div class="content">
 			<?php
-				$con = mysqli_connect("localhost","root","","mpofp");
+				$con = mysqli_connect("localhost","root","","veda");
 				if($con===false)
 					die("CONNECTION FAILED".mysqli_connect_error());
 				$a=$_POST['rfname'];
@@ -25,7 +25,7 @@
 				$e=$_POST['rpwd'];
 				$g=$_POST['crpwd'];
 				$f=$_POST['raddr'];
-				$q="INSERT INTO retailer(rfname,rlname,rpno,runame,rpassword,raddress) VALUES ('$a','$b','$c','$d','$e','$f')";
+				$q="INSERT INTO retailers(rfname,rlname,rpno,runame,rpassword,raddress) VALUES ('$a','$b','$c','$d','$e','$f')";
 				if($e != $g){
 					echo "<script type=\"text/javascript\">
 						alert(\"Password does not match !!!\");
