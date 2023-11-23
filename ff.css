@@ -1,0 +1,158 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.banner{
+	width: 100vw;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(farmer42.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.navbar{
+	font-size: 15px;
+	width: 85%;
+	margin: auto;
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid white;
+}
+.logo{
+	cursor: pointer;
+	width: 300px;
+	height:100px;
+	transform: translateX(-300px);
+}
+button{
+	width: 125px;
+	height: 35px;
+	font-size: 14px;
+	padding: 8px 0;
+	text-align: center;
+	margin: 10px 5px;
+	border-radius: 13px;
+	font-weight: solid;
+	border: 1px solid #009688;
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transform: translate(125px,100px);
+}
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 25px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+.navbar ul li::after{
+	content: '';
+	height: 1.5px;
+	width: 0;
+	background: #009688;
+	position: absolute;
+	left: 0;
+	bottom: -3.5px;
+	transition: 0.5s;
+}
+.navbar ul li:hover::after{
+	width: 100%;
+}
+.navbar::after{
+	content: '';
+	height: 1.5px;
+	width: 100%;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.content{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translate(7%,-100%);
+	color: #fff;
+}
+h6{
+	transform: translateY(-50%);
+	font-size: 30px;
+	margin-top: 40px;
+	font-style: italic;
+	color: white;
+}
+.content p{
+	transform: translateY(-50%);
+	font-size: 25px;
+	margin: 10px auto;
+	font-weight: 100;
+	line-height: 13px;
+}
+.ab{
+	background: #009688;
+	height: 100%;
+	width: 0;
+	border-radius: 13px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.5s;
+}
+button:hover span{
+	width: 100%;
+}
+button:hover{
+	border: none;
+}
+.regform{
+	width:500px;
+	background-color: rgb(0,0,0,0.6);
+	margin: auto;
+	color: #FFFFFF;
+	padding: 5px 0px 5px 0px;
+	text-align: center;
+	border-radius: 10px 10px 0px 0px;
+}
+.main{
+	background-color: rgb(0,0,0,0.5);
+	width: 500px;
+	height: 300px;
+	margin: auto;
+	border-radius: 5px 5px 5px 5px;
+	transform: translateY(-70px);
+}
+.cont{
+	border-collapse: collapse;
+	margin: 0px 0;
+	font-size: 25px;
+	min-width: 400px;
+	background-color: rgb(0,0,0,0.5);
+}
+.cont thread tr{
+	background-color: #009879;
+	color: #ffffff;
+	text-align: center;
+}
+.cont th{
+	color: white;
+}
+.cont td{
+	color: white;
+}
+.cont th,
+.cont td{
+	padding: 12px 15px;
+}
+.cont tbody th{
+	border-bottom: 1px solid #dddddd;	
+}

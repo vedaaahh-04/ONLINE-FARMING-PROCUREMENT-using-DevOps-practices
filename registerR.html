@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="register1.css">
+</head>
+<body>
+	<!--<script type="text/javascript">
+		function validate(){
+			var a = document.getElementById("pwd").value;
+			var b = document.getElementById("cpwd").value;
+
+			if (a.length < 5) {
+				alert("Password length must be greater than 5");
+				window.location.href="registerR.html";
+				rf.fpwd.focus();
+				return false;
+			}
+
+			if (a.length > 20) {
+				alert("Password length must be less than 20");
+				window.location.href="registerR.html";
+				rf.fpwd.focus();
+				return false;
+			}
+
+			if (a!=b) {
+				alert("Password not matched");
+				window.location.href="registerR.html";
+				rf.fpwd.focus();
+				return false;
+			}
+
+
+		}
+	</script>-->
+	<div class="banner">
+		<div class="navbar">
+			<img src="logo1.png" class="logo">
+			<ul>
+				<li><a href="homepage.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>   home</a></li>
+				<li><a href="about.html"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>   about us</a></li>
+			</ul>
+		</div>
+				<div class="regform"><h1>Retailer Registration</h1></div>
+		<div class="main">
+			<form name="rr" action="regretailer.php" method="post">
+				<div id="name">
+					<h2 class="name">Name</h2>
+					<input class="firstname" type="text" name="rfname" placeholder="First Name" pattern="[a-zA-Z\.]{5,}" required><br>
+					<input class="lastname" type="text" name="rlname" placeholder="Last Name" pattern="[a-zA-Z\.]{5,}" required>
+				</div>
+
+				<h2 class="name">Phone</h2>
+				<input type="text" name="rphone" class="number" pattern="[0-9]{10}" required>
+
+				<h2 class="name">Username</h2>
+				<input class="username" type="text" name="runame" pattern="[a-zA-Z0-9\.]{6,}" required>
+
+				<h2 class="name">Password</h2>
+				<input class="pass" type="password" name="rpwd" id="pwd" required>
+
+				<h2 class="name">Confirm Password</h2>
+				<input class="pass" type="password" name="crpwd" id="cpwd" required>
+
+				<h2 class="name">Address</h2>
+				<input class="address" type="text" name="raddr" placeholder="Enter complete address" required>
+
+				<button type="submit" onclick="validate()"><span class="ab"></span>Register</button>
+			</form>
+		</div>
+</body>
+</html>

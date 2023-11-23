@@ -1,0 +1,224 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.banner{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(farmer42.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.navbar{
+	font-size: 15px;
+	width: 85%;
+	margin: auto;
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid white;
+}
+.logo{
+	cursor: pointer;
+	width: 300px;
+	height:100px;
+	transform: translateX(-300px);
+}
+button{
+	width: 125px;
+	height: 35px;
+	font-size: 14px;
+	padding: 8px 0;
+	text-align: center;
+	margin: 10px 5px;
+	border-radius: 13px;
+	font-weight: solid;
+	border: 1px solid #009688;
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transform: translate(125px,100px);
+}
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 25px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+.navbar ul li::after{
+	content: '';
+	height: 1.5px;
+	width: 0;
+	background: #009688;
+	position: absolute;
+	left: 0;
+	bottom: -3.5px;
+	transition: 0.5s;
+}
+.navbar ul li:hover::after{
+	width: 100%;
+}
+.navbar::after{
+	content: '';
+	height: 1.5px;
+	width: 100%;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.content{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translate(7%,-180%);
+	color: #fff;
+}
+.content h6{
+	transform: translateY(-50%);
+	font-size: 30px;
+	margin-top: 40px;
+	font-style: italic;
+}
+.content p{
+	transform: translateY(-50%);
+	font-size: 25px;
+	margin: 10px auto;
+	font-weight: 100;
+	line-height: 13px;
+}
+.ab{
+	background: #009688;
+	height: 100%;
+	width: 0;
+	border-radius: 13px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.5s;
+}
+button:hover span{
+	width: 100%;
+}
+button:hover{
+	border: none;
+}
+.regform{
+	width:500px;
+	background-color: rgb(0,0,0,0.6);
+	margin: auto;
+	color: #FFFFFF;
+	padding: 5px 0px 5px 0px;
+	text-align: center;
+	border-radius: 10px 10px 0px 0px;
+}
+.main{
+	background-color: rgb(0,0,0,0.5);
+	width: 500px;
+	height: 300px;
+	margin: auto;
+	border-radius: 5px 5px 5px 5px;
+	transform: translateY(-70px);
+}
+form{
+	padding: 5px;
+}
+#name{
+	width: 100%;
+	height: 50px;
+}
+.name{
+	margin-left: 13px;
+	margin-top: 15px;
+	width: 350px;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 700;
+}
+label{
+	transform: translateX(40px);
+}
+input{
+	transform: translateX(20px);
+}
+.slist{
+	position: relative;
+	left: 18px;
+	top: 5px;
+	height: 25px;
+	width: 300px;
+	margin: 5px;
+	transform: translateY(10%);
+	line-height: 50px;
+	border-radius: 3px;
+	padding: 0 11px;
+	font-size: 13px;
+}
+.firstlable1{
+	position: relative;
+	color: #E5E5E5;
+	text-transform: capitalize;
+	font-size: 10px;
+	left:102px;
+	top: -27px;
+}
+.lastlable1{
+	position: relative;
+	color: #E5E5E5;
+	text-transform: capitalize;
+	font-size: 10px;
+	left:98px;
+	top: -28px;
+}
+.number{
+	position: relative;
+	left: 100px;
+	top: -26px;
+	line-height: 25px;
+	width: 125px;
+	border-radius: 3px;
+	padding: 0 11px;
+	font-size: 13px;
+	color: #555;
+}
+.quantity{
+	position: ;
+	color: #E5E5E5;
+	text-transform: capitalize;
+	font-size: 10px;
+	left:90px;
+	top: -27px;
+	transform: translate(-95px,18px);
+}
+.username{
+	position: relative;
+	left: 5px;
+	top: -5px;
+	line-height: 25px;
+	width: 125px;
+	border-radius: 3px;
+	padding: 0 11px;
+	font-size: 13px;
+	color: #555;
+}
+.qprice{
+	position: relative;
+	left: 5px;
+	top: -5px;
+	line-height: 25px;
+	width: 125px;
+	border-radius: 3px;
+	padding: 0 11px;
+	font-size: 13px;
+	color: #555;
+}
