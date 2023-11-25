@@ -18,7 +18,7 @@
 			ini_set('display_errors', 1);
 			ini_set('display_startup_errors', 1);
 			error_reporting(E_ALL);
-			
+
 				$host = "database-1.coannvnsp2rk.ap-south-1.rds.amazonaws.com";
 				$user = "root";
 				$pass = "";
