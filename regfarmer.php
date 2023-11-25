@@ -24,7 +24,7 @@
 				$pass = "";
 				$db = "database-1";
 				
-				$con = mysqli_connect($host, $user, $pass, $db);
+				$con = mysqli_connect($host, $user, $pass, $db,'3306');
 				
 				if (!$con) {
 					die("Connection failed: " . mysqli_connect_error());
