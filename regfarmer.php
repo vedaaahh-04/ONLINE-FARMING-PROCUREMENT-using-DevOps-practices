@@ -15,9 +15,19 @@
 		</div>
 		<div class="content">
 			<?php
-				$con = mysqli_connect("localhost","root","","veda");
-				if($con===false)
-					die("CONNECTION FAILED".mysqli_connect_error());
+				$host = "database-1.coannvnsp2rk.ap-south-1.rds.amazonaws.com";
+				$user = "root";
+				$pass = "";
+				$db = "veda";
+				
+				$con = mysqli_connect($host, $user, $pass, $db);
+				
+				if (!$con) {
+					die("Connection failed: " . mysqli_connect_error());
+				}
+				
+				// Connection successful, you can now use $con to interact with the database
+				
 				$a=$_POST['ffname'];
 				$b=$_POST['flname'];
 				$c=$_POST['fphone'];

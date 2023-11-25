@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `farmer`
 --
 
-CREATE TABLE `farmer` (
+CREATE TABLE farmers (
   `fname` varchar(20) NOT NULL,
   `lname` varchar(20) NOT NULL,
   `pno` bigint(20) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE `farmer` (
 -- Dumping data for table `farmer`
 --
 
-INSERT INTO `farmer` (`fname`, `lname`, `pno`, `uname`, `password`, `address`) VALUES
+INSERT INTO farmers(`fname`, `lname`, `pno`, `uname`, `password`, `address`) VALUES
 ('Abhiram', 'Polagani', 7981160999, 'abhiram', 'asdfghjkl', '17/126,edeplli,machlipatnam'),
 ('bhagyam', 'ramineni', 9876543210, 'bhagyam', 'bhagyam', 'gudlavalleru'),
 ('chaitanya', 'koneti', 8309999999, 'chaitu21', 'chaitu21', '4/144,edepalli,machilipatnam'),
@@ -57,7 +57,7 @@ INSERT INTO `farmer` (`fname`, `lname`, `pno`, `uname`, `password`, `address`) V
 -- Table structure for table `retailer`
 --
 
-CREATE TABLE `retailer` (
+CREATE TABLE retailers (
   `rfname` varchar(20) NOT NULL,
   `rlname` varchar(20) NOT NULL,
   `rpno` bigint(20) NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE `retailer` (
 -- Dumping data for table `retailer`
 --
 
-INSERT INTO `retailer` (`rfname`, `rlname`, `rpno`, `runame`, `rpassword`, `raddress`) VALUES
+INSERT INTO retailers (`rfname`, `rlname`, `rpno`, `runame`, `rpassword`, `raddress`) VALUES
 ('Abhiram', 'Polagani', 9999999999, 'abhiram01', 'asdfghjkl', '17/126,Edepalli,Machulipatnam'),
 ('gyaani', 'meruga', 8989898989, 'gyaani44', 'zzxxzzxxzz', '2-2-98,gudlavalleru,krishna'),
 ('Jaswanth', 'Vucha', 9299994495, 'jaswanth', 'jaswanth', '16/266,valandapalem,machilipatnam'),
@@ -88,22 +88,22 @@ INSERT INTO `retailer` (`rfname`, `rlname`, `rpno`, `runame`, `rpassword`, `radd
 -- Table structure for table `retailerdata`
 --
 
-CREATE TABLE `retailerdata` (
-  `firstname` varchar(20) NOT NULL,
-  `lastname` varchar(20) NOT NULL,
-  `phoneno` bigint(20) NOT NULL,
-  `address` varchar(100) NOT NULL,
-  `item` varchar(20) NOT NULL,
-  `quantity` int(20) NOT NULL,
-  `price` int(20) NOT NULL,
-  `username` varchar(20) NOT NULL
+CREATE TABLE retailerdata (
+  firstname varchar(20) NOT NULL,
+  lastname varchar(20) NOT NULL,
+  phoneno bigint(20) NOT NULL,
+  addres varchar(100) NOT NULL,
+  item varchar(20) NOT NULL,
+  quantity int(20) NOT NULL,
+  price int(20) NOT NULL,
+  username varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `retailerdata`
 --
 
-INSERT INTO `retailerdata` (`firstname`, `lastname`, `phoneno`, `address`, `item`, `quantity`, `price`, `username`) VALUES
+INSERT INTO retailerdata (`firstname`, `lastname`, `phoneno`, `address`, `item`, `quantity`, `price`, `username`) VALUES
 ('Abhiram', 'Polagani', 9999999999, '17/126,Edepalli,Machulipatnam', 'rice', 50, 55, 'abhiram01'),
 ('gyaani', 'meruga', 8989898989, '2-2-98,gudlavalleru,krishna', 'wheat', 40, 54, 'gyaani44'),
 ('gyaani', 'meruga', 8989898989, '2-2-98,gudlavalleru,krishna', 'rice', 50, 45, 'gyaani44'),
@@ -141,13 +141,13 @@ INSERT INTO `retailerdata` (`firstname`, `lastname`, `phoneno`, `address`, `item
 --
 -- Indexes for table `farmer`
 --
-ALTER TABLE `farmer`
+ALTER TABLE farmers
   ADD PRIMARY KEY (`uname`);
 
 --
 -- Indexes for table `retailer`
 --
-ALTER TABLE `retailer`
+ALTER TABLE retailers
   ADD PRIMARY KEY (`runame`);
 COMMIT;
 
