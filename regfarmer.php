@@ -19,7 +19,7 @@
 			ini_set('display_startup_errors', 1);
 			error_reporting(E_ALL);
 
-				$host = "veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com";
+				$host = "localhost";
 				$user = "root";
 				$pass = "";
 				$db = "veda";
