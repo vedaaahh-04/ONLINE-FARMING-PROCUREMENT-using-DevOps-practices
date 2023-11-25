@@ -22,7 +22,7 @@
 				$host = "database-1.coannvnsp2rk.ap-south-1.rds.amazonaws.com";
 				$user = "root";
 				$pass = "";
-				$db = "database-1";
+				$db = "veda";
 				
 				$con = mysqli_connect($host, $user, $pass, $db,'3306');
 				
