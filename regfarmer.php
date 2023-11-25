@@ -1,5 +1,5 @@
 <?php
-$host = "veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com";
+$host = "3.7.70.246";
 $user = "root";
 $pass = "vallika4503";
 $dbname = "veda";
