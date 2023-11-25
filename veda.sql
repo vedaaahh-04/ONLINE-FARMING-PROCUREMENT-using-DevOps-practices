@@ -103,7 +103,7 @@ CREATE TABLE retailerdata (
 -- Dumping data for table `retailerdata`
 --
 
-INSERT INTO retailerdata (`firstname`, `lastname`, `phoneno`, `address`, `item`, `quantity`, `price`, `username`) VALUES
+INSERT INTO retailerdata (`firstname`, `lastname`, `phoneno`, `addres`, `item`, `quantity`, `price`, `username`) VALUES
 ('Abhiram', 'Polagani', 9999999999, '17/126,Edepalli,Machulipatnam', 'rice', 50, 55, 'abhiram01'),
 ('gyaani', 'meruga', 8989898989, '2-2-98,gudlavalleru,krishna', 'wheat', 40, 54, 'gyaani44'),
 ('gyaani', 'meruga', 8989898989, '2-2-98,gudlavalleru,krishna', 'rice', 50, 45, 'gyaani44'),
