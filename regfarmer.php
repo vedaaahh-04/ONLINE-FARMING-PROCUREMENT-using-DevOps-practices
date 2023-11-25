@@ -15,21 +15,21 @@
 		</div>
 		<div class="content">
 			<?php
-			ini_set('display_errors', 1);
-			ini_set('display_startup_errors', 1);
-			error_reporting(E_ALL);
-
-				$host = "veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com";
-				$user = "root";
-				$pass = "";
-				$db = "veda";
-				$port = 3306;
-				
-				$con = mysqli_connect($host, $user, $pass, $db,$port);
-				
-				if (!$con) {
-					die("Connection failed: " . mysqli_connect_error());
-				}
+              
+			  $host = "veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com";
+			  $user = "root";
+			  $pass = "vallika4503";
+			  $dbname = "veda";
+			  
+			  // Create connection
+			  $conn = new mysqli($host, $user, $pass, $dbname);
+			  
+			  // Check connection
+			  if ($conn->connect_error) {
+				  die("Connection failed: " . $conn->connect_error);
+			  } else {
+				  echo "Connected successfully!";
+			  }
 				
 				// Connection successful, you can now use $con to interact with the database
 				

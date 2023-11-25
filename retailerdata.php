@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$con = mysqli_connect("localhost","root","","veda");
+	$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com","root","vallika4503","veda");
 	if($con===false)
 		die("CONNECTION FAILED".mysqli_connect_error());
 	$uname = $_SESSION['uname'];
@@ -39,7 +39,7 @@
 	$item = $_POST['course'];
 	$quantity = $_POST['quantity'];
 	$price = $_POST['price'];
-	$total = "INSERT INTO retailerdata(firstname,lastname,phoneno,address,item,quantity,price,username) VALUES ('$fname','$lname','$pno','$address','$item','$quantity','$price','$uname')";
+	$total = "INSERT INTO retailerdata(firstname,lastname,phoneno,addres,item,quantity,price,username) VALUES ('$fname','$lname','$pno','$addres','$item','$quantity','$price','$uname')";
 	if(mysqli_query($con,$total)){
 		echo "<script type=\"text/javascript\">
 			alert(\"Items stored.Sellers will contact you soon!\");

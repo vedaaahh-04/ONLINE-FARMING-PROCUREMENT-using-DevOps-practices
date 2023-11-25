@@ -15,7 +15,7 @@
 		</div>
 		<div class="content">
 			<?php
-				$con = mysqli_connect("localhost","root","","veda");
+				$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com","root","vallika4503","veda");
 				if($con===false)
 					die("CONNECTION FAILED".mysqli_connect_error());
 				$a=$_POST['rfname'];

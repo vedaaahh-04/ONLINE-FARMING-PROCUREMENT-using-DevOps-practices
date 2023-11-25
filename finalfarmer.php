@@ -18,11 +18,11 @@
 		<div align="center">
 			<h6>Retailers list : </h6>
 			<?php
-				$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com","root","","veda");
+				$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com","root","vallika4503","veda");
 				if($con===false)
 					die("CONNECTION FAILED".mysqli_connect_error());
 				$item = $_POST['course'];
-				$a = "select `firstname`,`lastname`,`phoneno`,`address`,`item`,`quantity`,`price` from retailerdata where `item`='$item' ORDER BY `price` desc";
+				$a = "select `firstname`,`lastname`,`phoneno`,`addres`,`item`,`quantity`,`price` from retailerdata where `item`='$item' ORDER BY `price` desc";
 				$result = mysqli_query($con,$a);
 			?>
 			<table class="cont" cellpadding="10" cellspacing="2" align="center">

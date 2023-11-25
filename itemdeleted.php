@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$con = mysqli_connect("localhost","root","","veda");
+	$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com","root","vallika4503","veda");
 	if($con===false)
 		die("CONNECTION FAILED".mysqli_connect_error());
 	$uname = $_SESSION['uname'];

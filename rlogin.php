@@ -2,7 +2,7 @@
 	session_start();
 	$uname = $_POST['runame'];
 	$password = $_POST['rpwd'];
-	$con = mysqli_connect("localhost","root","","veda");
+	$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com","root","vallika4503","veda");
 	if($con==false){
 		die("connection failed".mysqli_connect_error());
 	}
