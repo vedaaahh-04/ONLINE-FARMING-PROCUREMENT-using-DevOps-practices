@@ -1,35 +1,47 @@
 <?php
 	session_start();
-	$uname = $_POST['runame'];
-	$password = $_POST['rpwd'];
-	$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com","root","vallika4503","veda");
-	if($con==false){
-		die("connection failed".mysqli_connect_error());
-	}
-	else{
-		$stmt = $con->prepare("select * from retailers where runame = ?");
-		$stmt->bind_param("s",$uname);
+
+	// Getting form data
+	$uname = mysqli_real_escape_string($con, $_POST['runame']);
+	$password = mysqli_real_escape_string($con, $_POST['rpwd']);
+
+	// Establishing the database connection
+	$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com", "root", "vallika4503", "veda");
+
+	// Checking the database connection
+	if ($con === false) {
+		die("Connection failed: " . mysqli_connect_error());
+	} else {
+		// Preparing the SQL statement
+		$stmt = $con->prepare("SELECT * FROM retailers WHERE runame = ?");
+		$stmt->bind_param("s", $uname);
 		$stmt->execute();
+
+		// Getting the result
 		$stmt_result = $stmt->get_result();
-		if($stmt_result->num_rows > 0){
+
+		if ($stmt_result->num_rows > 0) {
+			// Fetching data from the result
 			$data = $stmt_result->fetch_assoc();
-			if($data['rpassword'] === $password){
+
+			// Checking the password
+			if ($data['rpassword'] === $password) {
 				$_SESSION['uname'] = $uname;
 				echo "<script> window.location.assign('retailerA.php'); </script>";
-			}
-			else{
+			} else {
 				echo "<script type=\"text/javascript\">
 						alert(\"Invalid username or password !!!\");
 					</script>";
-				echo "<script> window.location.assign('loginR.html'); </script>";	
+				echo "<script> window.location.assign('loginR.html'); </script>";
 			}
-		}
-		else{
+		} else {
 			echo "<script type=\"text/javascript\">
 					alert(\"Invalid username or password !!!\");
 				</script>";
-			echo "<script> window.location.assign('loginR.html'); </script>";	
+			echo "<script> window.location.assign('loginR.html'); </script>";
 		}
 	}
 
+	// Closing the database connection
+	mysqli_close($con);
 ?>

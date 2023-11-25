@@ -1,6 +1,41 @@
 <?php
 	session_start();
+	
+	// Establishing the database connection
+	$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com", "root", "vallika4503", "veda");
+	
+	// Checking the database connection
+	if ($con === false) {
+		die("CONNECTION FAILED" . mysqli_connect_error());
+	}
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		// Getting form data
+		$item = mysqli_real_escape_string($con, $_POST['course']);
+		$quantity = mysqli_real_escape_string($con, $_POST['quantity']);
+		$price = mysqli_real_escape_string($con, $_POST['price']);
+		
+		// Getting the logged-in username from the session
+		$uname = $_SESSION['uname'];
+
+		// Inserting data into the database
+		$sql = "INSERT INTO retailerdata(username, item, quantity, price) VALUES ('$uname', '$item', '$quantity', '$price')";
+
+		if (mysqli_query($con, $sql)) {
+			echo "<script type=\"text/javascript\">
+				alert(\"Data submitted successfully!\");
+			</script>";
+		} else {
+			echo "<script type=\"text/javascript\">
+				alert(\"Error: " . mysqli_error($con) . "\");
+			</script>";
+		}
+	}
+
+	// Closing the database connection
+	mysqli_close($con);
 ?>
+
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -19,7 +54,7 @@
 		<div class="content">
 			<h6>
 				<?php
-					echo"Hello ".$_SESSION['uname']."... Welcome to your account";
+					echo "Hello " . $_SESSION['uname'] . "... Welcome to your account";
 				?>
 			</h6>
 			<p>Buy your required product here for a reasonable price !!!</p>
@@ -48,7 +83,6 @@
 				<input class="qprice" type="number" name="price">
 				<label class="quantity">*per kilograms</label>
 
-				
 				<button type="submit"><span class="ab"></span>Submit</button>
 			</form>
 		</div>

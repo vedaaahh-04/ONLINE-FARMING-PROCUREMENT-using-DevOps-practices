@@ -15,9 +15,12 @@
 		</div>
 		<div class="content">
 			<?php
-				$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com","root","vallika4503","veda");
-				if($con===false)
-					die("CONNECTION FAILED".mysqli_connect_error());
+				$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com", "root", "vallika4503", "veda");
+
+				if ($con === false) {
+					die("CONNECTION FAILED" . mysqli_connect_error());
+				}
+
 				$a=$_POST['rfname'];
 				$b=$_POST['rlname'];
 				$c=$_POST['rphone'];
@@ -25,32 +28,38 @@
 				$e=$_POST['rpwd'];
 				$g=$_POST['crpwd'];
 				$f=$_POST['raddr'];
-				$q="INSERT INTO retailers(rfname,rlname,rpno,runame,rpassword,raddress) VALUES ('$a','$b','$c','$d','$e','$f')";
-				if($e != $g){
+
+				if ($e != $g) {
 					echo "<script type=\"text/javascript\">
 						alert(\"Password does not match !!!\");
 					</script>";
 					echo "<script> window.location.assign('registerR.html'); </script>";
+					mysqli_close($con);
 					return false;
 				}
-				if(strlen($e) < 5){
+
+				if (strlen($e) < 5) {
 					echo "<script type=\"text/javascript\">
 						alert(\"Password length should be greater than 5 !!!\");
 					</script>";
 					echo "<script> window.location.assign('registerR.html'); </script>";
+					mysqli_close($con);
 					return false;
 				}
-				if(mysqli_query($con,$q)){
+
+				$q="INSERT INTO retailers(rfname, rlname, rpno, runame, rpassword, raddress) VALUES ('$a', '$b', '$c', '$d', '$e', '$f')";
+
+				if (mysqli_query($con, $q)) {
 					echo "<h5>Your registration has successfully completed  !</h5><br>";
 					echo "<p>Click here to login to your account :</p>";
 					echo "<div><a href='loginR.html'><button><span class='ab'></span>Retailer Login</button></a></div>";
-				}
-				else{
+				} else {
 					echo "<script type=\"text/javascript\">
-						alert(\"Username already exist !!!\");
+						alert(\"Username already exists !!!\");
 					</script>";
 					echo "<script> window.location.assign('registerR.html'); </script>";
-				}		
+				}
+
 				mysqli_close($con);
 			?>
 		</div>
