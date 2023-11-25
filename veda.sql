@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `farmer`
 --
-
+DROP TABLE IF EXISTS farmers;
 CREATE TABLE farmers (
   `fname` varchar(20) NOT NULL,
   `lname` varchar(20) NOT NULL,
@@ -56,7 +56,7 @@ INSERT INTO farmers(`fname`, `lname`, `pno`, `uname`, `password`, `address`) VAL
 --
 -- Table structure for table `retailer`
 --
-
+DROP TABLE IF EXISTS retailers;
 CREATE TABLE retailers (
   `rfname` varchar(20) NOT NULL,
   `rlname` varchar(20) NOT NULL,
@@ -87,7 +87,7 @@ INSERT INTO retailers (`rfname`, `rlname`, `rpno`, `runame`, `rpassword`, `raddr
 --
 -- Table structure for table `retailerdata`
 --
-
+DROP TABLE IF EXISTS retailerdata;
 CREATE TABLE retailerdata (
   firstname varchar(20) NOT NULL,
   lastname varchar(20) NOT NULL,
