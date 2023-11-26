@@ -172,7 +172,7 @@ input{
 	color: #555;
 }
 .phone-number{
-	position: ;
+	position: relative;
 	color: #E5E5E5;
 	text-transform: capitalize;
 	font-size: 10px;
