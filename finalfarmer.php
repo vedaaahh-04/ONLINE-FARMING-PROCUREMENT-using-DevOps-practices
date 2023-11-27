@@ -18,7 +18,7 @@
         <div align="center">
             <h6>Retailers list : </h6>
             <?php
-                $con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com", "root", "vallika4503", "veda");
+                $con = mysqli_connect("13.233.0.164", "root", "vallika4503", "veda");
                 if (!$con) {
                     die("CONNECTION FAILED" . mysqli_connect_error());
                 }

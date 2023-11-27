@@ -6,7 +6,7 @@
 	$password = mysqli_real_escape_string($con, $_POST['rpwd']);
 
 	// Establishing the database connection
-	$con = mysqli_connect("veda.coannvnsp2rk.ap-south-1.rds.amazonaws.com", "root", "vallika4503", "veda");
+	$con = mysqli_connect("13.233.0.164", "root", "vallika4503", "veda");
 
 	// Checking the database connection
 	if ($con === false) {
