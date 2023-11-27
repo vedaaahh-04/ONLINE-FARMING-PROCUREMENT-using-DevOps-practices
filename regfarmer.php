@@ -1,4 +1,21 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="in1.css">
+</head>
+<body>
+	<div class="banner">	
+		<div class="navbar">
+			<img src="logo1.png" class="logo">
+			<ul>
+				<li><a href="homepage.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>   home</a></li>
+				<li><a href="help.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>   help</a></li>
+				<li><a href="about.html"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>   about us</a></li>
+			</ul>
+		</div>
+		<div class="content">
 <?php
+
 $host = "13.233.0.164";
 $user = "root";
 $pass = "vallika4503";
