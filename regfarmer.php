@@ -30,7 +30,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-echo "Connected successfully!";
+    echo   "Connected successfully!";
 
 // Connection successful, you can now use $conn to interact with the database
 
