@@ -3,10 +3,10 @@ $host = "13.233.0.164";
 $user = "root";
 $pass = "vallika4503";
 $dbname = "veda";
-$port = 3306; // Make sure to use the correct port
+
 
 // Create connection
-$conn = new mysqli($host, $user, $pass, $dbname, $port);
+$conn = new mysqli($host, $user, $pass, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
